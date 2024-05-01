@@ -1,10 +1,10 @@
 import sys
 
-MODEL_ID = sys.argv[0]
-final = int(sys.argv[1])
-dtype = sys.argv[2]
-l_0 = int(sys.argv[3])
-l_n = int(sys.argv[4])
+MODEL_ID = sys.argv[1]
+final = int(sys.argv[2])
+dtype = sys.argv[3]
+l_0 = int(sys.argv[4])
+l_n = int(sys.argv[5])
 
 yaml_config = f"""
 slices:
