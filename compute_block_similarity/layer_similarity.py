@@ -100,7 +100,7 @@ def main(model_path: str, dataset: str, dataset_column: str, batch_size: int, ma
     logging.info(f"Layer {min_distance_layer} to {min_distance_layer + layers_to_skip} has the minimum average distance of {min_distance}. Consider examining this layer more closely for potential optimization or removal.")
     logging.info("Layer distances written to layer_distances.csv")
 
-    return (min_distance_layer, min_distance_layer + layers_to_skip)
+    return (model.config.num_hidden_layers, str(model.config.torch_dtype)[6:],min_distance_layer, min_distance_layer + layers_to_skip)
 
 if __name__ == "__main__":
 
@@ -117,6 +117,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    l, l_n = main(args.model_path, args.dataset, args.dataset_column, args.batch_size,
+    final_layer, dtype,  l, l_n = main(args.model_path, args.dataset, args.dataset_column, args.batch_size,
          args.max_length, args.layers_to_skip, args.dataset_size, args.dataset_subset)
-    print(f'{l} {l_n}')
+    print(f'{final_layer} {dtype} {l} {l_n}')
