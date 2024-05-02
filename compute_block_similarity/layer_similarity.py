@@ -132,7 +132,7 @@ if __name__ == "__main__":
     dtype: {dtype}
     """
     # Save config as yaml file
-    print(f'{final_layer} {dtype} {l} {l_n}')
+    print(f'{final_layer} {dtype} {l_0} {l_n}')
     with open('./../slice_with_mergekit/slice.yaml', 'w', encoding="utf-8") as f:
         f.write(yaml_config)
     
