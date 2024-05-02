@@ -2,7 +2,7 @@
 
 OUTPUT_PATH = "./merged"  # folder to store the result in
 LORA_MERGE_CACHE = "/tmp"  # change if you want to keep these for some reason
-CONFIG_YML = "./slice.yaml"  # merge configuration file
+CONFIG_YML = "./../slice_with_mergekit/slice.yaml"  # merge configuration file
 COPY_TOKENIZER = True  # you want a tokenizer? yeah, that's what i thought
 LAZY_UNPICKLE = False  # experimental low-memory model loader
 LOW_CPU_MEMORY = True # enable if you somehow have more VRAM than RAM+swap
