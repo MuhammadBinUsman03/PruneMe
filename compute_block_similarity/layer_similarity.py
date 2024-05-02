@@ -119,12 +119,13 @@ if __name__ == "__main__":
 
     final_layer, dtype,  l_0, l_n = main(args.model_path, args.dataset, args.dataset_column, args.batch_size,
          args.max_length, args.layers_to_skip, args.dataset_size, args.dataset_subset)
-    yaml_config = f"""slices:
-- sources:
-    - model: {args.model_path}
+    yaml_config = f"""
+slices:
+  - sources:
+      - model: {args.model_path}
         layer_range: [0, {l_0-1}]
-- sources:
-    - model: {args.model_path}
+  - sources:
+      - model: {args.model_path}
         layer_range: [{l_n}, {final_layer}]
             
 merge_method: passthrough
