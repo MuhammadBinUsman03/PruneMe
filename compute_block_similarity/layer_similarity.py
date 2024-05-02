@@ -122,10 +122,10 @@ if __name__ == "__main__":
     yaml_config = f"""
     slices:
     - sources:
-        - model: {MODEL_ID}
+        - model: {args.model_path}
             layer_range: [0, {l_0-1}]
     - sources:
-        - model: {MODEL_ID}
+        - model: {args.model_path}
             layer_range: [{l_n}, {final_layer}]
                 
     merge_method: passthrough
