@@ -136,4 +136,4 @@ dtype: {dtype}
         f.write(yaml_config)
     
     import subprocess
-    subprocess.run("python ./..slice_with_mergekit/merge_me.py", shell=True)
+    subprocess.run("python ./../slice_with_mergekit/merge_me.py", shell=True)
